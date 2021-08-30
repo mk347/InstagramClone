@@ -12,31 +12,31 @@ import logo from '../assets/logo.png';
 const HomeStack = createNativeStackNavigator();
 
 const HomeRoutes = () => {
-    return (  
-        <HomeStack.Navigator>
-        <HomeStack.Screen 
-          name="HomeScreen" 
-          component={HomeScreen} 
-          options={{
-            title: 'Instagram',
-            headerLeft: () => (
-              <Feather name="camera" size={25} color={'#000'} />
-            ),
-            headerTitle: () => (
-              <Image source={logo} style={{width: 135, resizeMode: 'contain', position: 'absolute'}} />
-            ),
-            headerRight: () => (
-              <Ionicons name="paper-plane-outline" size={25} color={'#000'} />
-            ),
-          }}
-        />
-        <HomeStack.Screen 
-          name="Story"
-          component={StoryScreen}
-        />
-      </HomeStack.Navigator>
-  
-    );
+  return (
+    <HomeStack.Navigator>
+      <HomeStack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{
+          title: 'Instagram',
+          headerLeft: () => (
+            <Feather name="camera" size={25} color={'#000'} />
+          ),
+          headerTitle: () => (
+            <Image source={logo} style={{ width: 135, height: 50, resizeMode: 'contain', position: 'absolute' }} />
+          ),
+          headerRight: () => (
+            <Ionicons name="paper-plane-outline" size={25} color={'#000'} />
+          ),
+        }}
+      />
+      <HomeStack.Screen
+        name="Story"
+        component={StoryScreen}
+      />
+    </HomeStack.Navigator>
+
+  );
 }
- 
+
 export default HomeRoutes;
