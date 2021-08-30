@@ -1,13 +1,13 @@
 import React from "react";
-import { View, Text } from 'react-native';
+import { Text, SafeAreaView } from 'react-native';
 
 
 const StoryScreen = () => {
-    return ( 
-        <View>
+    return (
+        <SafeAreaView>
             <Text>Story</Text>
-        </View>
-        );
+        </SafeAreaView>
+    );
 }
- 
+
 export default StoryScreen;

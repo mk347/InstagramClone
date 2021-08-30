@@ -6,7 +6,6 @@ import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from '../screens/HomeScreen';
-import StoryScreen from '../screens/StoryScreen';
 import logo from '../assets/logo.png';
 
 const HomeStack = createNativeStackNavigator();
@@ -29,10 +28,6 @@ const HomeRoutes = () => {
             <Ionicons name="paper-plane-outline" size={25} color={'#000'} />
           ),
         }}
-      />
-      <HomeStack.Screen
-        name="Story"
-        component={StoryScreen}
       />
     </HomeStack.Navigator>
 
