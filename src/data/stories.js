@@ -11,7 +11,7 @@ export default [
                 postedTime: '25 minutes'
             },
             {
-                imageUri: 'https://ae01.alicdn.com/kf/HTB15I95LpXXXXbmXFXXq6xXFXXXO/Kemp-Centrifuge-Abstract-Fine-Art-painting-Or-paints-Various-Sizes-Hand-Painted-Art-Supplies-Modern-Art.jpg',
+                imageUri: 'https://cdn.shopify.com/s/files/1/0054/2887/1268/collections/5_1200x1200.jpg?v=1593507101',
                 postedTime: '25 minutes'
             },
             {
