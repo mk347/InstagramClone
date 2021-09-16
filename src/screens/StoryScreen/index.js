@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { SafeAreaView, ImageBackground, ActivityIndicator, TouchableWithoutFeedback, Dimensions } from 'react-native';
+import { SafeAreaView, ImageBackground, ActivityIndicator, TouchableWithoutFeedback, Dimensions, Text, View, TextInput } from 'react-native';
 import { useRoute, useNavigation } from "@react-navigation/core";
+
+import styles from "./styles";
 import storiesData from '../../data/stories';
 import ProfilePicture from '../../components/ProfilePicture';
-import styles from "./styles";
-
+import Feather from 'react-native-vector-icons/Feather';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const StoryScreen = () => {
 
@@ -88,7 +90,32 @@ const StoryScreen = () => {
         <SafeAreaView style={styles.container}>
             <TouchableWithoutFeedback onPress={handlePress}>            
                 <ImageBackground source={{ uri: activeStory.imageUri }} style={styles.image}>
-                    <ProfilePicture uri={userStories.user.imageUri} />
+                    <View style={styles.userInfo}>
+                        <ProfilePicture uri={userStories.user.imageUri} size={50} />
+                        <Text style={styles.userName}>{userStories.user.name}</Text>
+                        <Text style={styles.postedTime}>{activeStory.postedTime}</Text>
+                    </View>
+                    <View style={styles.bottomContainer}>
+                        <View style={styles.cameraButton}>
+                            <Feather name="camera" size={30} color={'#ffffff'} />
+                        </View>    
+                        
+                        <View style={styles.textInputContainer}>
+                            <TextInput 
+                            style={styles.textInput} 
+                            editable 
+                            placeholder="Send message"
+                            placeholderTextColor={"white"} 
+                            />
+                        </View>
+
+                        <View style={styles.messageButton}>
+                            <Ionicons name="paper-plane-outline" size={30} color={'#ffffff'} />
+                        </View>    
+
+
+                        
+                    </View>
                 </ImageBackground>
             </TouchableWithoutFeedback>
         </SafeAreaView>
