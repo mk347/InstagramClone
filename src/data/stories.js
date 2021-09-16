@@ -28,7 +28,7 @@ export default [
         },
         stories: [
             {
-                imageUri: 'https://cdn.shopify.com/s/files/1/0054/2887/1268/collections/5_1200x1200.jpg?v=1593507101',
+                imageUri: 'https://cdn.shopify.com/s/files/1/0054/2887/1268/products/il_1140xN.2203385922_ovzx_2048x2048.jpg?v=1611220306',
                 postedTime: '25 minutes'
             },
             {
@@ -49,7 +49,7 @@ export default [
         },
         stories: [
             {
-                imageUri: 'https://ae01.alicdn.com/kf/HTB15I95LpXXXXbmXFXXq6xXFXXXO/Kemp-Centrifuge-Abstract-Fine-Art-painting-Or-paints-Various-Sizes-Hand-Painted-Art-Supplies-Modern-Art.jpg',
+                imageUri: 'https://cdn.shopify.com/s/files/1/0054/2887/1268/products/2_a9e300a6-6ffa-42bc-8390-122c8d45c71d_2048x2048.png?v=1627694281',
                 postedTime: '25 minutes'
             },
             {

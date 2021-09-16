@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { SafeAreaView, ImageBackground, ActivityIndicator, TouchableWithoutFeedback, Dimensions } from 'react-native';
 import { useRoute, useNavigation } from "@react-navigation/core";
-import storiesData from '../../data/stories'
-
+import storiesData from '../../data/stories';
+import ProfilePicture from '../../components/ProfilePicture';
 import styles from "./styles";
 
 
@@ -39,11 +39,11 @@ const StoryScreen = () => {
     }, [activeStoryIndex]);
 
     const navigateToNextUser = () => {
-        navigation.navigate("Story", { userId: (userId + 1).toString() });
+        navigation.push("Story", { userId: (parseInt(userId) + 1).toString() });
     }
 
     const navigateToPrevUser = () => {
-        navigation.navigate("Story", { userId: (userId - 1).toString() });
+        navigation.push("Story", { userId: (parseInt(userId) - 1).toString() });
     }
 
 
@@ -84,12 +84,12 @@ const StoryScreen = () => {
 
     const activeStory = userStories.stories[activeStoryIndex];
 
-
     return (
-        
         <SafeAreaView style={styles.container}>
             <TouchableWithoutFeedback onPress={handlePress}>            
-                <ImageBackground source={{ uri: activeStory.imageUri }} style={styles.image} />
+                <ImageBackground source={{ uri: activeStory.imageUri }} style={styles.image}>
+                    <ProfilePicture uri={userStories.user.imageUri} />
+                </ImageBackground>
             </TouchableWithoutFeedback>
         </SafeAreaView>
 
